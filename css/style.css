@@ -27,11 +27,16 @@ la déclaration à la racine permet de définir des éléments avant la feuille 
     --nav-color: rgba(242, 238, 172, 1);
     --footer-bg: rgba(58, 75, 99, 1);
     --footer-color: rgba(242, 238, 172, 1);
+    --gutter: 0.5rem;
     color: var(--main-site-color)
 }
 
 /* Color Theme Swatches in RGBA */
 .color-theme_sortie-privative-en-catamaran-de-course-a-port-camargue-4-rgba { color: rgba(242, 212, 174, 1); }
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
 
 img{
     max-width: 100%;
@@ -42,12 +47,38 @@ a, a:visited{
     color: var(--main-link-color);
 }
 
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.17rem;
+}
+h4{
+    font-size: 1rem;
+}
+h5{
+    font-size: 0.83rem;
+}
+h6{
+    font-size: 0.67rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+}
+
 /* déclaration de classe */
 
 /* déclaration structure */
 
 body{
     background-color: var(--site-background);
+    margin: 0;
 }
 
 body > header,
@@ -56,6 +87,49 @@ body > footer
 {
     background-color: var(--header-bg);
     color: var(--header-color);
+    padding-left: calc( 2 * var(--gutter) );
+    padding-right: calc( 2 * var(--gutter) );
+}
+
+body > nav ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body > nav ul li{
+    min-width: 110px;
+    text-align: center;
+    border-left: 1px solid var(--nav-color);
+}
+
+body > nav ul li:first-child{
+    border-left: unset;
+}
+body > nav ul li:last-child{
+    border-right: 1px solid var(--nav-color);
+}
+
+body > nav ul li a{
+    display: block;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+body > nav ul li a:hover{
+    color: var(--nav-bg);
+    background-color: var(--nav-color);
+}
+
+body > main{
+    padding-left: calc( 2 * var(--gutter) );
+    padding-right: calc( 2 * var(--gutter) );
+}
+
+body > nav ul,
+body > nav ol{
+    margin: 0;
 }
 
 body > header a,
