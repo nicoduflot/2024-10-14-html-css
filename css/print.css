@@ -1,0 +1,35 @@
+:root {
+  color: black;
+}
+
+body > nav {
+  display: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+ol,
+ul {
+  /* si on imprime le site, pour éviter que les listes soient coupées entre de page, on utilise la propriété "page-break-inside" que l'on met à "avoid", la liste sera déplacée entièrement à la page suivante */
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+caption {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+@page{
+    margin: 1cm;
+}

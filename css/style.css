@@ -1,0 +1,30 @@
+/* Commentaire en CSS */
+/*
+Unités de dimension les plus utilisés en web
+
+px          =>  Pixel
+em          =>  cadratin : unité de mesure en print sur les presses. 
+                le cadratin se calcul part rapport à la taille de la police dans l'élément parent
+rem         =>  cadratin racine : se calcul part rapport à la taille de la police dans l'élément racine
+%           =>  Pourcentage, de l'espace disponible autour de l'élément
+vw & vh     =>  vw : viewport width; vh : viewport height
+
+*/
+/* déclarations générales */
+/* 
+la déclaration à la racine permet de définir des éléments avant la feuille de style du navigateur.
+*/
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    color: black;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    word-break: break-all;
+}
