@@ -18,13 +18,52 @@ la déclaration à la racine permet de définir des éléments avant la feuille 
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.8rem;
     font-size: 1.3rem;
-    color: black;
+    --main-site-color: rgba(13, 0, 0, 1);
+    --site-background: rgba(156, 176, 217, 1);
+    --main-link-color: rgba(58, 75, 99, 1);
+    --header-bg: rgba(58, 75, 99, 1);
+    --header-color: rgba(242, 238, 172, 1);
+    --nav-bg: rgba(58, 75, 99, 1);
+    --nav-color: rgba(242, 238, 172, 1);
+    --footer-bg: rgba(58, 75, 99, 1);
+    --footer-color: rgba(242, 238, 172, 1);
+    color: var(--main-site-color)
 }
+
+/* Color Theme Swatches in RGBA */
+.color-theme_sortie-privative-en-catamaran-de-course-a-port-camargue-4-rgba { color: rgba(242, 212, 174, 1); }
 
 img{
     max-width: 100%;
 }
 
-a{
+a, a:visited{
     word-break: break-all;
+    color: var(--main-link-color);
+}
+
+/* déclaration de classe */
+
+/* déclaration structure */
+
+body{
+    background-color: var(--site-background);
+}
+
+body > header,
+body > nav,
+body > footer
+{
+    background-color: var(--header-bg);
+    color: var(--header-color);
+}
+
+body > header a,
+body > nav a,
+body > footer a,
+body > header a:visited,
+body > nav a:visited,
+body > footer a:visited{
+    color: var(--header-color);
+    text-decoration: none;
 }
