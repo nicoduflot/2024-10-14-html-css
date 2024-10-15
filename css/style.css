@@ -42,6 +42,11 @@ img{
     max-width: 100%;
 }
 
+figure img{
+    border: 3px solid var(--main-site-color);
+    border-radius: 0.5rem;
+}
+
 a, a:visited{
     word-break: break-all;
     color: var(--main-link-color);
@@ -73,6 +78,21 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* déclaration de classe */
+
+.carre-200{
+    width: 200px;
+    height: 200px;
+}
+
+.vignette{
+    background-color: var(--main-site-color);
+    object-fit:cover;
+    border: 0.2rem solid var(--main-site-color);
+}
+
+.vignette.rounded{
+    border-radius: 50%;
+}
 
 /* déclaration structure */
 
