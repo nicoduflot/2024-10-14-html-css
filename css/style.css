@@ -16,11 +16,15 @@ la déclaration à la racine permet de définir des éléments avant la feuille 
 */
 :root{
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.8rem;
-    --font-size: 1.3rem;
+    line-height: 1.5rem;
+    --font-size: 1.1rem;
+    --form-font-size: 1.1rem;
     font-size: var(--font-size);
     --main-site-color: rgba(13, 0, 0, 1);
     --site-background: rgba(156, 176, 217, 1);
+    --site-background-75: rgba(156, 176, 217, 0.75);
+    --site-background-50: rgba(156, 176, 217, 0.5);
+    --site-background-25: rgba(156, 176, 217, 0.25);
     --main-link-color: rgba(58, 75, 99, 1);
     --header-bg: rgba(58, 75, 99, 1);
     --header-color: rgba(242, 238, 172, 1);
@@ -87,6 +91,30 @@ h1, h2, h3, h4, h5, h6{
     padding-bottom: var(--gutter);
 }
 
+form{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+form fieldset{
+    border: 1px solid var(--nav-bg);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+form fieldset legend{
+    border-radius: 1rem;
+    border: 1px solid var(--nav-bg);
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    box-shadow: 1px 1px 3px var(--nav-bg);
+}
+
 form button{
     line-height: 2rem;
     font-size: var(--font-size);
@@ -95,6 +123,7 @@ form button{
     cursor: pointer;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-bottom: 0.25rem;
 }
 
 form button[type="submit"]{
@@ -122,6 +151,34 @@ form button[type="button"]{
 
 form button[type="button"]:hover{
     background-color: var(--simple-button-hover);
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form select{
+    line-height: 1.8rem;
+    height: 1.8rem;
+    font-size: var(--form-font-size);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--main-link-color);
+}
+
+form input[type="checkbox"]{
+    line-height: 1.3rem;
+}
+
+form textarea{
+    width: 100%;
+    height: 200px;
+    background-color: var(--site-background-50);
+    border-radius: 0.5rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-size: var(--font-size);
+    line-height: 1.5rem;
 }
 
 /* déclaration de classe */
