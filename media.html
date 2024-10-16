@@ -37,32 +37,118 @@
                 <header>
                     <h3>Les media image</h3>
                 </header>
-                <p>
-                    En HTML, la balise img permet d'afficher une image.
-                    Pour améliorer le référencement et l'accessibilité, des normes et des balise contenantes existent.
-                </p>
-                <p>
-                    Un attribut est nécessaire pour rendre la balise img plus accessible : alt.
-                </p>
-                <p>
-                    l'attribut alt est un texte alternatif de description de l'image : il faut décrire l'image appelée dans la page, on parle ici d'une description de l'image, pas de l'image dans un contexte.
-                </p>
-                <p>
-                    Pour ajouter un contexte amélioré à une image, on peut utiliser le conteneur figure.
-                </p>
-                <p>
-                    Figure permet de lier une description (une legende) avec la balise figcaption à l'image, au niveau sémantique donc de lier cette légeande à l'image au niveau SEO.
-                </p>
+                <div class="colonnes-x">
+                    <p>
+                        En HTML, la balise img permet d'afficher une image.
+                        Pour améliorer le référencement et l'accessibilité, des normes et des balise contenantes
+                        existent.
+                    </p>
+                    <p>
+                        Un attribut est nécessaire pour rendre la balise img plus accessible : alt.
+                    </p>
+                    <p>
+                        l'attribut alt est un texte alternatif de description de l'image : il faut décrire l'image
+                        appelée dans la page, on parle ici d'une description de l'image, pas de l'image dans un
+                        contexte.
+                    </p>
+                    <p>
+                        Pour ajouter un contexte amélioré à une image, on peut utiliser le conteneur figure.
+                    </p>
+                    <p>
+                        Figure permet de lier une description (une legende) avec la balise figcaption à l'image, au
+                        niveau sémantique donc de lier cette légeande à l'image au niveau SEO.
+                    </p>
+                </div>
                 <figure>
-                    <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" alt="illustration d'un motard debout devant une moto japonaise devant un coucher de soleil dans le style graphique du courant synthwave dans des ton orangés et violet fluo, par le graphiste James White" />
+                    <img src="./images/synthwave-vibe-james-white-signalnoise.jpg"
+                        alt="illustration d'un motard debout devant une moto japonaise devant un coucher de soleil dans le style graphique du courant synthwave dans des ton orangés et violet fluo, par le graphiste James White" />
                     <figcaption>
-                        Une des images issue d'une <a href="https://signalnoise.com/outrun-series" title="lien vers la galerie hommage au jeu outrun par james white" target="_blank">galerie hommage au jeu vidéo outrun</a>, par James White
+                        Une des images issue d'une <a href="https://signalnoise.com/outrun-series"
+                            title="lien vers la galerie hommage au jeu outrun par james white" target="_blank">galerie
+                            hommage au jeu vidéo outrun</a>, par James White
                     </figcaption>
                 </figure>
                 <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" class="carre-200 vignette" alt="" />
                 <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="carre-200 vignette" alt="" />
-                <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" class="carre-200 vignette rounded" alt="" />
-                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="carre-200 vignette rounded" alt="" />
+                <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" class="carre-200 vignette rounded"
+                    alt="" />
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="carre-200 vignette rounded"
+                    alt="" />
+                <!--
+                <a href="https://www.flickr.com/photos/randar/54068800162/in/feed-421939-1729022119-1-72157721738334925" title="&quot;Satan&#x27;s Mistress&quot;, Spicy Mystery Stories, October 1935, cover by Norman Saunders"><img src="https://live.staticflickr.com/65535/54068800162_81329924f8_k.jpg" alt="&quot;Satan&#x27;s Mistress&quot;, Spicy Mystery Stories, October 1935, cover by Norman Saunders"/></a>
+                -->
+            </article>
+            <article>
+                <header>
+                    <h3>L'audio hébergé sur le site</h3>
+                </header>
+                <p>
+                    La balise audio permet d'ajouter à la page un media audio, ce media s'écrit de plusieurs façons
+                    possibles.
+                </p>
+                <p>
+                    On peut directement mettre la source du médio audio dans la balise audio, mais il est possible, si
+                    on dispose de plusieurs extension du fichier audio, d'utilser une balise source par fichier audio.
+                </p>
+                <figure>
+                    <audio controls preload="auto">
+                        <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                        <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                    </audio>
+                    <figcaption>
+                        Musique d'ambiance de la ville de Tristram dans le jeu vidéo Diablo (1) sorti en 1998.
+                    </figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h3>La vidéo hébergé sur le site</h3>
+                </header>
+                <figure>
+                    <video src="./media/video/Fallout-4-Launch-Trailer.mp4" muted autoplay controls></video>
+                    <figcaption>
+                        Vidéo trailer du lancement du jeu vidéo Fallout 4 (2015)
+                    </figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h3>La vidéo hébergé sur un site tier</h3>
+                </header>
+                <p>
+                    Les vidéos partagés par des site de contenu vidéo sont partageable grace au iframes.
+                </p>
+                <h4>L'iframe</h4>
+                <p>
+                    L'iframe est un cadre dans la page qui permet d'appeler une autre ressource
+                </p>
+                <ul>
+                    <li>Une autre page html (si le serveur hébergeur permet le partage)</li>
+                </ul>
+                <p>
+                    L'iframe permet aussi de faire ceci
+                </p>
+                <ul>
+                    <li><a href="./documents/PP3.pdf" target="documents" >PP3</a></li>
+                    <li><a href="./documents/CRAM.pdf" target="documents" >CRAM</a></li>
+                    <li><a href="./media/audio/diablo_town.mp3" target="documents" >Diablo</a></li>
+                    <li><a href="./media/video/Fallout-4-Launch-Trailer.mp4" target="documents" >Trailer fallout 4</a></li>
+                </ul>
+                <iframe name="documents" src="./documents/CRAM.pdf" style="width: 100%; height: 300px;"></iframe>
+                <h4>YouTube</h4>
+                <figure class="video-cadre">
+                    <iframe class="video-iframe" src="https://www.youtube.com/embed/Uqft600wp9Y?si=cBNAyt724RkmVZP3"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <h4>Dailymotion</h4>
+                <figure style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                    <iframe src="https://geo.dailymotion.com/player.html?video=xxkxw"
+                        style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"
+                        allowfullscreen title="Dailymotion Video Player" allow="web-share">
+                    </iframe>
+                </figure>
             </article>
         </section>
     </main>
