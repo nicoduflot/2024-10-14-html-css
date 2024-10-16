@@ -332,6 +332,40 @@ form textarea{
     content: "\F26A";
 }
 
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon-content{
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    max-width: 200px;
+    min-height: 200px ;
+    border: 1px solid black;
+}
+.ribbon {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  .ribbon {
+    --d: 0.6rem; /* the depth */
+    
+    position: absolute;
+    top: 5px;
+    inset-inline: calc(-1*var(--d));
+    border-bottom: var(--d) solid #00000088;
+    line-height: 1.8rem;
+    clip-path: polygon(0 0,100% 0,100% calc(100% - var(--d)),calc(100% - var(--d)) 100%,calc(100% - var(--d)) calc(100% - var(--d)),var(--d) calc(100% - var(--d)),var(--d) 100%,0 calc(100% - var(--d)));
+    background-color: red; /* the main color */
+  }
+
+  .dafalgan{
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    background: linear-gradient(to right, red, red 50%, #eee 50%, #eee 75%);
+    margin: 1rem;
+  }
+
 /* déclaration structure */
 
 body{
