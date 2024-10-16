@@ -14,6 +14,11 @@ vw & vh     =>  vw : viewport width; vh : viewport height
 /* 
 la déclaration à la racine permet de définir des éléments avant la feuille de style du navigateur.
 */
+
+/* on importe les fichiers CSS avant tout autre déclaration CSS, mais les commentaire ne gène pas l'import */
+
+@import url('./bootstrap-icons.css');
+
 :root{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
@@ -217,6 +222,114 @@ form textarea{
     top:0px; 
     overflow:hidden; 
     border:none;
+}
+
+.test-box{
+    width: 150px;
+    height: 150px;
+    margin: 5rem 5rem 10rem 5rem;
+    background-color: white;
+}
+
+.rainbow{
+    box-shadow: 
+        0 0 0 10px violet, 
+        0 0 0 20px blue,
+        0 0 0 30px green,
+        0 0 0 40px yellow,
+        0 0 0 50px orange,
+        0 0 0 60px red;
+}
+
+.atari{
+    background-color: black;
+    border-top-left-radius: 50%;
+    box-shadow: 
+    -10px 0 red,
+    -20px 0 orange,
+    -30px 0 yellow
+     ;
+}
+
+.bicolore{
+    box-shadow: 
+        inset 10px 0 goldenrod,
+        inset -10px 0px goldenrod,
+        inset 0 -10px black,
+        inset 0 10px black,
+        inset 0 0 0 20px fuchsia
+    ;
+}
+
+.text-box{
+    background-color: var(--site-background);
+    color: var(--site-background);
+    font-size: 2rem;
+    font-weight: bold;
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.text-1{
+    text-shadow: 0 0 5px black;
+}
+
+.text-2{
+    text-shadow: 2px 2px  black,
+    -2px -2px 2px black;
+}
+
+.triangle{
+    height: 0;
+    width: 0;
+    --height-triangle: 50px;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: calc( var(--height-triangle) * 0.866 );
+    border-top-width: calc( var(--height-triangle) / 2);
+    border-bottom-width: calc( var(--height-triangle) / 2);
+    border-right-width: 0;
+    margin: 2rem;
+}
+
+.t-rouge{
+    border-left-color: red;
+}
+
+.t-vert{
+    border-left-color: green;
+}
+
+.info{
+    min-height: 100px;
+    border: 3px solid transparent;
+    border-radius: 0.25rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+}
+
+.warning{
+    border-color: orangered;
+    background-color: orange;
+    color: black;
+}
+
+.warning::before{
+    font-family: 'bootstrap-icons';
+    padding: 0.25rem;
+    content: "\f33a";
+}
+
+.success{
+    border-color: green;
+    background-color: greenyellow;
+    color: black;
+}
+
+.success::before{
+    font-family: 'bootstrap-icons';
+    padding: 0.25rem;
+    content: "\F26A";
 }
 
 /* déclaration structure */
