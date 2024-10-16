@@ -17,7 +17,8 @@ la déclaration à la racine permet de définir des éléments avant la feuille 
 :root{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.8rem;
-    font-size: 1.3rem;
+    --font-size: 1.3rem;
+    font-size: var(--font-size);
     --main-site-color: rgba(13, 0, 0, 1);
     --site-background: rgba(156, 176, 217, 1);
     --main-link-color: rgba(58, 75, 99, 1);
@@ -28,6 +29,15 @@ la déclaration à la racine permet de définir des éléments avant la feuille 
     --footer-bg: rgba(58, 75, 99, 1);
     --footer-color: rgba(242, 238, 172, 1);
     --gutter: 0.5rem;
+    --send-button: rgb(10, 194, 10);
+    --border-send-button: rgb(7, 136, 7);
+    --send-button-hover: var(--border-send-button);
+    --reset-button: orange;
+    --border-reset-button: rgb(183, 119, 0);
+    --reset-button-hover: var(--border-reset-button);
+    --simple-button: rgb(174, 174, 174);
+    --border-simple-button: rgb(111, 111, 111);
+    --simple-button-hover: var(--border-simple-button);
     color: var(--main-site-color)
 }
 
@@ -75,6 +85,43 @@ h1, h2, h3, h4, h5, h6{
     margin: 0;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
+}
+
+form button{
+    line-height: 2rem;
+    font-size: var(--font-size);
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+form button[type="submit"]{
+    background-color: var(--send-button);
+    border-color: var(--border-send-button);
+}
+
+form button[type="submit"]:hover{
+    background-color: var(--send-button-hover);
+}
+
+form button[type="reset"]{
+    background-color: var(--reset-button);
+    border-color: var(--border-reset-button);
+}
+
+form button[type="reset"]:hover{
+    background-color: var(--reset-button-hover);
+}
+
+form button[type="button"]{
+    background-color: var(--simple-button);
+    border-color: var(--border-simple-button);
+}
+
+form button[type="button"]:hover{
+    background-color: var(--simple-button-hover);
 }
 
 /* déclaration de classe */

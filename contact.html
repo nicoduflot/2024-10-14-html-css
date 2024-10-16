@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendée Globe | Formulaire de contact</title>
+    <!-- c'est dans la balise head que l'on fera le lien avec le ou les fichiers CSS pour styliser -->
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+</head>
+
+<body>
+    <header>
+        <h1>Vendée Globe <small>l'Everest des mers</small></h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="./" target="_self" title="Lien vers la page d'accueil">Accueil</a>
+            </li>
+            <li>
+                <a href="./media.html" target="_self" title="Lien vers les media'">Media</a>
+            </li>
+            <li>
+                <a href="./contact.html" target="_self" title="Lien vers le formulaire de contact">Contact</a>
+            </li>
+            <li>
+                <a href="./article.html" target="_self" title="Lien vers l'article">Article</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Les formulaires de contact</h2>
+            <article>
+                <header>
+                    <h3>Créer un formulaire</h3>
+                </header>
+                <p>
+                    Le but premier d'un formulaire est de récupérer des données enregistrées par le visiteur pour traitement
+                </p>
+                <form method="get" action="./contact.html">
+                    <fieldset>
+                        <legend>Civilité</legend>
+                        <p>
+                            <label for="nom">Nom</label><br />
+                            <input type="text" name="nom" id="nom" required aria-describedby="info-nom" autofocus />
+                        </p>
+                        <div id="info-nom">
+                            Entrez dans ce champ votre nom de famille, il est obligatoire
+                        </div>
+                        <p>
+                            <label for="email">Email</label><br />
+                            <input type="email" 
+                            pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" name="email" id="email" required aria-describedby="info-email" />
+                        </p>
+                        <div id="info-email">
+                            Entrez dans ce champ votre email, il est obligatoire
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Détails de la demande</legend>
+                        <p>
+                            <label>Type de demande</label>
+                            <div>
+                                <input type="radio" name="radio" id="radio1" value="option1" checked /> <label for="option1">Radio 1</label> <br/>
+                                <input type="radio" name="radio" id="radio2" value="option2" /> <label for="option1">Radio 2</label> <br/>
+                                <input type="radio" name="radio" id="radio3" value="option3" /> <label for="option3">Radio 3</label> <br/>
+                                <input type="radio" name="radio" id="radio4" value="option4" /> <label for="option4">Radio 4</label> <br/>
+                            </div>
+                        </p>
+                        <p>
+                            <label>Options supplémentaires</label>
+                            <div>
+                                <input type="checkbox" name="option1" id="option1" value="option1" /> <label for="option1">Option 1</label> <br/>
+                                <input type="checkbox" name="option2" id="option2" value="option2" /> <label for="option1">Option 2</label> <br/>
+                                <input type="checkbox" name="option3" id="option3" value="option3" /> <label for="option3">Option 3</label> <br/>
+                                <input type="checkbox" name="option4" id="option4" value="option4" /> <label for="option4">Option 4</label> <br/>
+                            </div>
+                        </p>
+                        <p>
+                            <input type="number" name="number" min="0" max="10" step="0.5" value="0" /><br/>
+                            <input id="range" type="range" min="0" max="10" step="1" value="0" /> <span id="resRange"></span>
+                            <script>
+                                document.getElementById('range').addEventListener('change', function(){
+                                    document.getElementById('resRange').innerHTML = document.getElementById('range').value;
+                                });
+                            </script>
+                            <br />
+                            <input type="color" id="color" name="color" /> <span id="resColor"></span>
+                            <script>
+                                document.getElementById('color').addEventListener('change', function(){
+                                    document.getElementById('resColor').innerHTML = document.getElementById('color').value;
+                                });
+                            </script>
+                        </p>
+                        <p>
+                            <select name="select">
+                                <option value="" selected>Faire un choix ou une préférence</option>
+                                <optgroup label="Choix">
+                                    <option value="Choix 1">Choix 1</option>
+                                    <option value="Choix 2">Choix 2</option>
+                                    <option value="Choix 3">Choix 3</option>
+                                    <option value="Choix 4">Choix 4</option>
+                                </optgroup>
+                                <optgroup label="Préference">
+                                    <option value="Preference 1">Préférence 1</option>
+                                    <option value="Preference 2">Préférence 2</option>
+                                    <option value="Preference 3">Préférence 3</option>
+                                    <option value="Preference 4">Préférence 4</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <textarea name="textarea"></textarea>
+                    </fieldset>
+                    <p>
+                        <button type="submit" data-toto="test">Envoyer</button>
+                        <button type="reset">Vider le formulaire</button>
+                        <button type="button">Un bouton qui fait rien</button>
+                    </p>
+                    
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; DAWAN - Octobre 2024
+    </footer>
+</body>
+
+</html>
